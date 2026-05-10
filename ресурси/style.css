@@ -1,0 +1,203 @@
+:root {
+  --max-width: 300px;
+  --text-color: black;
+  --background-color: white;
+  --blockquote-border-color: black;
+  --blockquote-background-color: #f0f0f0;
+  --border-color: #cccccc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  margin: 0;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: white;
+    --background-color: black;
+    --blockquote-border-color: white;
+    --blockquote-background-color: #202020;
+    --border-color: #444444;
+  }
+
+  img {
+    filter: drop-shadow(0 0 1px white);
+  }
+}
+
+.UiLogo {
+  max-width: var(--max-width);
+  width: 100%;
+  font-size: 2em;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.UiTop {
+  max-width: var(--max-width);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.UiTop svg {
+  width: 100%;
+  height: auto;
+}
+
+.UiLogo>svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.UiLinkList {
+  max-width: var(--max-width);
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.UiLinkItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.125rem;
+  border: 1px dashed var(--background-color);
+}
+
+.UiLinkItem+.UiLinkItem {
+  margin-top: 0.5em;
+}
+
+.UiLinkItem:hover {
+  border: 1px dashed var(--text-color);
+}
+
+.UiLinkItem:active {
+  border: 1px solid var(--text-color);
+}
+
+.UiLinkItemLogo {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5em;
+}
+
+.UiLinkItemLogo>img {
+  display: block;
+  height: 1em;
+}
+
+.UiHelpLinkList {
+  max-width: var(--max-width);
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.UiHelpLinkItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.125rem;
+  border: 1px dashed var(--background-color);
+}
+
+.UiHelpLinkItem.back {
+  font-size: 0.875rem;
+}
+
+.UiHelpLinkItem+.UiHelpLinkItem {
+  margin-top: 0.5em;
+}
+
+.UiHelpLinkItem:hover {
+  border: 1px dashed var(--text-color);
+}
+
+.UiHelpLinkItem:active {
+  border: 1px solid var(--text-color);
+}
+
+.UiSeparator {
+  max-width: var(--max-width);
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-color);
+  opacity: 0.5;
+  margin: 1rem 0;
+}
+
+.UiContent {
+  max-width: var(--max-width);
+  width: 100%;
+}
+
+blockquote {
+  border-left: 4px solid var(--blockquote-border-color);
+  padding-left: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: var(--blockquote-background-color);
+}
+
+ol {
+  padding-left: 1.5em;
+}
+
+ol li {
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+code {
+  font-family: monospace;
+  background-color: var(--blockquote-background-color);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  word-break: break-word;
+}
+
+button.sm {
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.125em 0.5em;
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+button.sm:hover {
+  background-color: var(--border-color);
+}
